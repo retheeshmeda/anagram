@@ -11,9 +11,29 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+/**
+* AnagramImpl.java
+* The AnagramImpl Class implements an Interface called Anagram
+* where defined the two methods signature
+* This class is used to find anagram groups from the given 
+* file using a method findAnagrams
+* @author  Retheesh Medamal
+*  
+*/
+
 public class AnagramImpl implements Anagram {
 
 	String anagramGroupList = null;
+	
+	/**
+	   * This method is used to find the anagram from
+	   * the given file.
+	   * Use sorted word as a key for map 
+	   * If map contains key, add the list
+	   * If not, create a new anagram list and add list with key
+	   * @filePath This is the "input.txt" file location
+	   * @return collection of String anagram words after sorting.
+	   */
 
 	public String findAnagrams(String filePath) {
 
@@ -68,6 +88,12 @@ public class AnagramImpl implements Anagram {
 	 * Sort alphabetically characters of given anagramWord
 	 */
 
+	/**
+	   * This method is used to Sort alphabetically characters 
+	   * of given anagramWord.
+	   * @param anagramWord This is a String type form the input.txt file
+	   * @return String with sorted characters.
+	   */
 	public String anagramWordSorting(String anagramWord) {
 		char[] sortedChars = anagramWord.toCharArray();
 		Arrays.sort(sortedChars);
